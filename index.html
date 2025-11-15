@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka - Premium E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Luka.jpg" alt="Luka Logo" class="me-2" style="height: 50px; width: auto;">
+                <span class="logo">LUKA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart <span id="cart-count" class="badge bg-gold">0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="display-4 fw-bold text-white">Welcome to <span class="text-gold">LUKA</span></h1>
+                    <p class="lead text-white">Discover premium products crafted with excellence. Elevate your lifestyle with our curated collection.</p>
+                    <a href="products.html" class="btn btn-gold btn-lg" data-aos="zoom-in" data-aos-delay="500">Shop Now</a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/600x400/000000/FFD700?text=LUKA+Hero+Image" alt="Luka Hero" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="featured-products py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white" data-aos="fade-up">Featured Products</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bg-dark text-white border-gold">
+                        <img src="Product1.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Item 1</h5>
+                            <p class="card-text">Description of premium product 1.</p>
+                            <p class="text-gold fw-bold">$99.99</p>
+                            <button class="btn btn-gold add-to-cart" data-product-id="1">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bg-dark text-white border-gold">
+                        <img src="Product2.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Item 2</h5>
+                            <p class="card-text">Description of premium product 2.</p>
+                            <p class="text-gold fw-bold">$149.99</p>
+                            <button class="btn btn-gold add-to-cart" data-product-id="2">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card bg-dark text-white border-gold">
+                        <img src="Product3.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Item 3</h5>
+                            <p class="card-text">Description of premium product 3.</p>
+                            <p class="text-gold fw-bold">$79.99</p>
+                            <button class="btn btn-gold add-to-cart" data-product-id="3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-sellers py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white" data-aos="fade-up">Best Sellers</h2>
+            <ul class="nav nav-tabs justify-content-center mb-4" id="bestSellersTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active text-gold" id="homme-tab" data-bs-toggle="tab" data-bs-target="#homme" type="button" role="tab" aria-controls="homme" aria-selected="true">Homme</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-gold" id="femmes-tab" data-bs-toggle="tab" data-bs-target="#femmes" type="button" role="tab" aria-controls="femmes" aria-selected="false">Femmes</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="bestSellersTabContent">
+                <div class="tab-pane fade show active" id="homme" role="tabpanel" aria-labelledby="homme-tab">
+                    <div class="row">
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card bg-dark text-white border-gold">
+                                <img src="https://via.placeholder.com/300x200/000000/FFD700?text=Men's+Premium+Watch" class="card-img-top" alt="Men's Premium Watch">
+                                <div class="card-body">
+                                    <h5 class="card-title">Premium Watch</h5>
+                                    <p class="card-text">Elegant timepiece crafted for the discerning gentleman.</p>
+                                    <p class="text-gold fw-bold">$299.99</p>
+                                    <button class="btn btn-gold add-to-cart" data-product-id="4">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card bg-dark text-white border-gold">
+                                <img src="https://via.placeholder.com/300x200/000000/FFD700?text=Men's+Leather+Wallet" class="card-img-top" alt="Men's Leather Wallet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Leather Wallet</h5>
+                                    <p class="card-text">Handcrafted genuine leather wallet with premium finish.</p>
+                                    <p class="text-gold fw-bold">$89.99</p>
+                                    <button class="btn btn-gold add-to-cart" data-product-id="5">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card bg-dark text-white border-gold">
+                                <img src="https://via.placeholder.com/300x200/000000/FFD700?text=Men's+Suit" class="card-img-top" alt="Men's Suit">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tailored Suit</h5>
+                                    <p class="card-text">Bespoke suit made from finest Italian wool.</p>
+                                    <p class="text-gold fw-bold">$599.99</p>
+                                    <button class="btn btn-gold add-to-cart" data-product-id="6">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="femmes" role="tabpanel" aria-labelledby="femmes-tab">
+                    <div class="row">
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card bg-dark text-white border-gold">
+                                <img src="https://via.placeholder.com/300x200/000000/FFD700?text=Women's+Diamond+Earrings" class="card-img-top" alt="Women's Diamond Earrings">
+                                <div class="card-body">
+                                    <h5 class="card-title">Diamond Earrings</h5>
+                                    <p class="card-text">Stunning diamond earrings that capture every light.</p>
+                                    <p class="text-gold fw-bold">$499.99</p>
+                                    <button class="btn btn-gold add-to-cart" data-product-id="7">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card bg-dark text-white border-gold">
+                                <img src="https://via.placeholder.com/300x200/000000/FFD700?text=Women's+Designer+Handbag" class="card-img-top" alt="Women's Designer Handbag">
+                                <div class="card-body">
+                                    <h5 class="card-title">Designer Handbag</h5>
+                                    <p class="card-text">Luxurious leather handbag with gold accents.</p>
+                                    <p class="text-gold fw-bold">$349.99</p>
+                                    <button class="btn btn-gold add-to-cart" data-product-id="8">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card bg-dark text-white border-gold">
+                                <img src="https://via.placeholder.com/300x200/000000/FFD700?text=Women's+Silk+Dress" class="card-img-top" alt="Women's Silk Dress">
+                                <div class="card-body">
+                                    <h5 class="card-title">Silk Evening Dress</h5>
+                                    <p class="card-text">Elegant silk dress perfect for special occasions.</p>
+                                    <p class="text-gold fw-bold">$299.99</p>
+                                    <button class="btn btn-gold add-to-cart" data-product-id="9">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="text-white mb-4">About LUKA</h2>
+                    <p class="text-white mb-4">LUKA represents the pinnacle of luxury and craftsmanship. We curate only the finest products, ensuring that every item in our collection meets the highest standards of quality and elegance.</p>
+                    <p class="text-white mb-4">Our commitment to excellence drives us to source materials from the world's most reputable suppliers and work with master artisans who share our passion for perfection.</p>
+                    <a href="products.html" class="btn btn-outline-gold">Explore Our Collection</a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://via.placeholder.com/600x400/FFD700/000000?text=LUKA+About" alt="About Luka" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white" data-aos="fade-up">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bg-dark text-white border-gold">
+                        <div class="card-body text-center">
+                            <img src="https://via.placeholder.com/80x80/FFD700/000000?text=SJ" alt="Sarah Johnson" class="rounded-circle mb-3 border border-gold">
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                            </div>
+                            <p class="card-text">"Exceptional quality and service. LUKA products have transformed my lifestyle."</p>
+                            <h6 class="text-gold">- Sarah Johnson</h6>
+                            <small class="text-white-50">Verified Customer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bg-dark text-white border-gold">
+                        <div class="card-body text-center">
+                            <img src="https://via.placeholder.com/80x80/FFD700/000000?text=MC" alt="Michael Chen" class="rounded-circle mb-3 border border-gold">
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star-half-alt text-gold"></i>
+                            </div>
+                            <p class="card-text">"The attention to detail is remarkable. Every purchase from LUKA is an investment in luxury."</p>
+                            <h6 class="text-gold">- Michael Chen</h6>
+                            <small class="text-white-50">Verified Customer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card bg-dark text-white border-gold">
+                        <div class="card-body text-center">
+                            <img src="https://via.placeholder.com/80x80/FFD700/000000?text=ER" alt="Emma Rodriguez" class="rounded-circle mb-3 border border-gold">
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                                <i class="fas fa-star text-gold"></i>
+                            </div>
+                            <p class="card-text">"Outstanding craftsmanship and premium materials. LUKA sets the standard for excellence."</p>
+                            <h6 class="text-gold">- Emma Rodriguez</h6>
+                            <small class="text-white-50">Verified Customer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h3 class="text-white mb-3">Stay Updated</h3>
+                    <p class="text-white mb-4">Subscribe to our newsletter for exclusive offers and new product announcements.</p>
+                    <form class="newsletter-form d-flex">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-gold mb-3">LUKA</h5>
+                    <p class="text-white-50">Premium luxury products crafted with excellence and attention to detail.</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.instagram.com/lukaa_for_you?igsh=MWtpNTBjeXA1MnBrOQ==" target="_blank" class="text-gold me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gold me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-gold me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-gold"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-gold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="products.html" class="text-white-50 text-decoration-none">Products</a></li>
+                        <li><a href="cart.html" class="text-white-50 text-decoration-none">Cart</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-gold mb-3">Contact Info</h6>
+                    <p class="text-white-50 mb-2"><i class="fas fa-phone me-2"></i>0646920353</p>
+                    <p class="text-white-50 mb-2"><i class="fas fa-envelope me-2"></i>youssef231007@gmail.com</p>
+                    <div class="payment-icons mt-3">
+                        <i class="fab fa-cc-visa fa-2x me-3"></i>
+                        <i class="fab fa-cc-mastercard fa-2x me-3"></i>
+                        <i class="fab fa-cc-amex fa-2x me-3"></i>
+                        <i class="fab fa-cc-paypal fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gold my-4">
+            <div class="text-center">
+                <p class="text-white-50">&copy; 2023 Luka. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
