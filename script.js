@@ -32,7 +32,7 @@ function addToCart(productId, name, price, image) {
     cartCount += 1;
     localStorage.setItem('lukaCart', JSON.stringify(cart));
     updateCartCount();
-    alert('Item added to cart!');
+    alert('Article ajouté au panier !');
 }
 
 // Remove item from cart
@@ -70,7 +70,7 @@ function renderCart() {
     cartItemsContainer.innerHTML = '';
 
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<div class="col-12 text-center"><p class="text-white">Your cart is empty.</p></div>';
+        cartItemsContainer.innerHTML = '<div class="col-12 text-center"><p class="text-white">Votre panier est vide.</p></div>';
         if (cartTotalElement) cartTotalElement.textContent = '0.00';
         return;
     }
@@ -101,7 +101,7 @@ function renderCart() {
                             <p class="text-white fw-bold">$${itemTotal.toFixed(2)}</p>
                         </div>
                         <div class="col-md-1">
-                            <button class="remove-btn" data-product-id="${item.id}">Remove</button>
+            <button class="remove-btn" data-product-id="${item.id}">Supprimer</button>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ function setupCheckout() {
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             if (cart.length === 0) {
-                alert('Your cart is empty!');
+                alert('Votre panier est vide !');
             } else {
                 showPaymentMethodStep();
             }
@@ -193,7 +193,7 @@ function setupPersonalInfoForm() {
             });
 
             if (!isValid) {
-                alert('Please fill in all required fields.');
+                alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
 
@@ -325,10 +325,10 @@ function setupPaymentForm() {
                     modal.hide();
 
                     payNowBtn.disabled = false;
-                    payNowBtn.innerHTML = 'Pay Now';
+                    payNowBtn.innerHTML = 'Payer maintenant';
 
                     // Show success alert
-                    alert('Order placed successfully! Payment will be collected upon delivery.');
+                    alert('Commande passée avec succès ! Le paiement sera collecté à la livraison.');
 
                     // Re-render cart (will show empty)
                     renderCart();
@@ -354,10 +354,10 @@ function setupPaymentForm() {
                     modal.hide();
 
                     payNowBtn.disabled = false;
-                    payNowBtn.innerHTML = 'Pay Now';
+                payNowBtn.innerHTML = 'Payer maintenant';
 
-                    // Show success alert
-                    alert('Payment successful! Thank you for your purchase.');
+                // Show success alert
+                alert('Paiement réussi ! Merci pour votre achat.');
 
                     // Re-render cart (will show empty)
                     renderCart();
@@ -379,7 +379,7 @@ function setupPaymentForm() {
             });
 
             if (!isValid) {
-                alert('Please fill in all required fields.');
+                alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
 
@@ -401,10 +401,10 @@ function setupPaymentForm() {
                 // Reset form
                 paymentForm.reset();
                 payNowBtn.disabled = false;
-                payNowBtn.innerHTML = 'Pay Now';
+                payNowBtn.innerHTML = 'Payer maintenant';
 
                 // Show success alert
-                alert('Payment successful! Thank you for your purchase.');
+                alert('Paiement réussi ! Merci pour votre achat.');
 
                 // Re-render cart (will show empty)
                 renderCart();
@@ -492,10 +492,10 @@ function validateField(e) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (value === '') {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Email is required');
+            showValidationFeedback(field, 'L\'email est requis');
         } else if (!emailRegex.test(value)) {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Please enter a valid email address');
+            showValidationFeedback(field, 'Veuillez saisir une adresse email valide');
         } else {
             field.classList.add('is-valid');
         }
@@ -507,10 +507,10 @@ function validateField(e) {
         const cardRegex = /^\d{4}\s?\d{4}\s?\d{4}\s?\d{4}$/;
         if (value === '') {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Card number is required');
+            showValidationFeedback(field, 'Le numéro de carte est requis');
         } else if (!cardRegex.test(value.replace(/\s/g, ''))) {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Please enter a valid card number');
+            showValidationFeedback(field, 'Veuillez saisir un numéro de carte valide');
         } else {
             field.classList.add('is-valid');
         }
@@ -522,10 +522,10 @@ function validateField(e) {
         const expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
         if (value === '') {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Expiry date is required');
+            showValidationFeedback(field, 'La date d\'expiration est requise');
         } else if (!expiryRegex.test(value)) {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Please enter a valid expiry date (MM/YY)');
+            showValidationFeedback(field, 'Veuillez saisir une date d\'expiration valide (MM/AA)');
         } else {
             field.classList.add('is-valid');
         }
@@ -537,10 +537,10 @@ function validateField(e) {
         const cvvRegex = /^\d{3,4}$/;
         if (value === '') {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'CVV is required');
+            showValidationFeedback(field, 'Le CVV est requis');
         } else if (!cvvRegex.test(value)) {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'Please enter a valid CVV');
+            showValidationFeedback(field, 'Veuillez saisir un CVV valide');
         } else {
             field.classList.add('is-valid');
         }
@@ -551,7 +551,7 @@ function validateField(e) {
     if (field.hasAttribute('required')) {
         if (value === '') {
             field.classList.add('is-invalid');
-            showValidationFeedback(field, 'This field is required');
+            showValidationFeedback(field, 'Ce champ est requis');
         } else {
             field.classList.add('is-valid');
         }
@@ -577,7 +577,7 @@ function setupNewsletter() {
 
             if (email) {
                 // Simulate subscription
-                alert('Thank you for subscribing! You will receive our latest updates.');
+                alert('Merci de vous être abonné ! Vous recevrez nos dernières mises à jour.');
                 emailInput.value = '';
                 emailInput.classList.remove('is-valid', 'is-invalid');
             }
